@@ -1,0 +1,41 @@
+@mixin flex-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+div#header{
+    width: 100%;
+    margin-bottom: 13px;
+    @include flex-row;
+    div#edit{
+        padding: 8px;
+        button{ 
+            @include flex-row;
+            flex-direction: row-reverse;
+            border: none;
+            cursor: pointer;
+            background-color: transparent;
+            h3{
+                font-family: Neo Sans Arabic, Inter;
+                margin: 0 8px 0 0;
+                font-size: 14px;
+            }
+            svg{
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+    div{
+        @include flex-row;
+        align-items: center;
+        h3{
+            font-size: 16px;
+            margin: 0 7px 0 0;
+        }
+    }
+
+}
