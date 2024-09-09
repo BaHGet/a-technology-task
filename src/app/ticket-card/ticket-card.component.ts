@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './ticket-card.component.scss'
 })
 export class TicketCardComponent {
-
+  link: string = 'www.tazkty.com/473847';
 }
