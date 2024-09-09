@@ -2,3 +2,14 @@ body{
     margin: 0;
     font-family: 'Neo Sans Arabic', sans-serif;
 }
+
+.btn{
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+    filter: drop-shadow(0px 0px 6px #352c63cc) !important;
+    background-color: #8b75fa21;
+    transition: all 0.3s ease-in-out;
+}
