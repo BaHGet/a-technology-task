@@ -1,19 +1,15 @@
 @import url('https://fonts.cdnfonts.com/css/montserrat');
 
-div#ticket-bg{
-    position: fixed;
-    top: 15vh;
-    left: 5vw;
-    z-index: -99;
-}
 div#main-ticket-card{
-    position: fixed;
-    width: 306px;
-    height: 250px;
-    top: 15vh;
-    left: 5vw;
-    margin-top: 26px;
-    margin-left: 20px;
+    position: relative;
+    width: 400px;
+    height: 310px;
+    background-image: url('../../../public/assets/ticket.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    padding-left: 20px;
+    margin-right: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,8 +23,7 @@ div#first-row{
     align-items: center;
     margin-top: 5%;
     h4{
-        margin: 0 0 0 17%;
-        font-size: .7rem;
+        margin: 0 0 0 23%;
         font-weight: 500;
     }
 }
@@ -37,31 +32,31 @@ div#ticket-link-container{
     width: fit-content;
     display: flex;
     align-items: center;
-    margin: 9% 0 0 -15%;
+    margin: 10% 0 0 -9%;
 
     h4#ticket-link{
         margin: 0 0 0 10%;
-        font-size: .5rem;
+        font-size: .7rem;
         font-weight: 500;
         color:black;
     }
     svg{
-        width: 27px;
+        width: 37px;
         height: 15px;
     }
 }
 
 div#vaild-date{
     h4{
-        margin: 18% 0 0 -32px;
+        margin: 41% 0 0 -31px;
         font-size: 0.6rem;
         font-weight: 400;
     }
 }
 
 div#last-row{
-    width: 250px;
-    margin: 35px 49px 0 0 ;
+    width: 370px;
+    margin: 50px 18px 0 0px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -94,5 +89,33 @@ div#last-row{
 }
 ::ng-deep img{
     border-radius: 4px;
+}
+
+@media (max-width: 770px) {
+    div#main-ticket-card{
+        width: 90%;
+        height: 90%;
+        padding-left: 0;
+        margin: 0;
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+    div#first-row{
+        margin-left: 60px;
+        h4{
+            margin: 0 0 0 12%;
+        }
+    }
+    div#ticket-link-container{
+        margin: 9% 0 0 -3%
+    }
+    div#vaild-date h4{
+        margin: 20px;
+    }
+    div#last-row{
+        width: 340px;
+        margin: 0px;
+        padding: 20px;
+    }
 }
 
