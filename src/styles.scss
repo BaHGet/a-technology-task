@@ -5,6 +5,9 @@ body{
 
 .btn{
     transition: all 0.3s ease-in-out;
+    &.btn-margin{
+        margin: 5px;
+    }
 }
 
 .btn:hover{
