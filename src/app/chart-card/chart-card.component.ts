@@ -11,8 +11,11 @@ export class ChartCardComponent implements OnInit {
   ngOnInit(): void {
     const data = [120, 180, 100, 220, 160, 140, 200, 250, 190, 100, 170]
     let width, height;
-    if(window.innerWidth < 770) {width = window.innerWidth * .9; height = window.innerHeight * .3;}
-    else {width = window.innerWidth * 0.5; height = window.innerHeight * 0.3;}
+    if(window.outerWidth < 770) {
+      width = window.outerWidth * .7;
+      height = window.outerHeight * .3;
+    }
+    else {width = window.outerWidth * 0.5; height = window.outerHeight * 0.25;}
     const chart = echarts.init(document.getElementById('chart-card') , null, {
       width: width,
       height: height
@@ -134,15 +137,14 @@ export class ChartCardComponent implements OnInit {
       // Update chart size on window resize
       let newWidth;
       let oldWidth = chart.getWidth();
-      if(window.innerWidth > 770 ){ // Desktops
-        newWidth = window.innerWidth * .5
-        if(newWidth !== oldWidth) chart.resize({ width: newWidth});
+      if(window.outerWidth > 770 ){ // Desktops
+        newWidth = window.outerWidth * .5
+        chart.resize({ width: newWidth});
       }
       else{ // Mobile
-        newWidth = window.innerWidth * .9
+        newWidth = window.outerWidth * .7
         if(newWidth !== oldWidth) chart.resize({ width: newWidth});
       }
-      chart.resize()
     });
   }
 }
