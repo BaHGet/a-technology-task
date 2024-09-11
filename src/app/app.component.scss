@@ -13,3 +13,13 @@ main#main-component{
         justify-content: space-between;
     }
 }
+
+@media (max-width: 770px) {
+    main#main-component{
+        margin: 0;
+        padding: 0;
+    }
+    #top-container{
+        flex-direction: column;
+    }
+}
